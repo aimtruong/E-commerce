@@ -12,25 +12,25 @@ router.get('/', (req, res) => {
       "tag_name",
     ],
     include: [
-        {
-          model: Product,
-          attributes: [
-            "id", 
-            "product_name",
-            "price", 
-            "stock", 
-            "category_id"
-          ],
-          include: [
-            {
+      {
+        model: Product,
+        attributes: [
+          "id", 
+          "product_name",
+          "price", 
+          "stock", 
+          "category_id"
+        ],
+        include: [
+          {
             model: Tag,
-            through: ProductTag,
-            as: "product_tag"
-            }
-          ]
-        }
-    ]
-  })
+            attributes: { exclude: ["id", "tag_name"] },
+            through: ProductTag
+          }
+        ]
+      }
+  ]
+})
     .then(dbTagData => res.json(dbTagData))
     .catch(err => {
       console.log(err);
@@ -62,9 +62,9 @@ router.get('/:id', (req, res) => {
           ],
           include: [
             {
-            model: Tag,
-            through: ProductTag,
-            as: "product_tag"
+              model: Tag,
+              attributes: { exclude: ["id", "tag_name"] },
+              through: ProductTag
             }
           ]
         }
