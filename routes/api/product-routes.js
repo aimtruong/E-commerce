@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
           through: ProductTag,
           as: "tags"
         }
-      ]
+    ]
   })
     .then(dbProductData => res.json(dbProductData))
     .catch(err => {
