@@ -24,9 +24,9 @@ router.get('/', (req, res) => {
           model: Tag,
           attributes: ["id", "tag_name"],
           through: ProductTag,
-          as: "tags"
+          as: "product_tag"
         }
-    ]
+      ]
   })
     .then(dbProductData => res.json(dbProductData))
     .catch(err => {
@@ -59,7 +59,7 @@ router.get('/:id', (req, res) => {
           model: Tag,
           attributes: ["id", "tag_name"],
           through: ProductTag,
-          as: "tags"
+          as: "product_tag"
         }
       ]
   })
