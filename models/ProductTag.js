@@ -5,6 +5,7 @@ const sequelize = require('../config/connection');
 class ProductTag extends Model {}
 
 ProductTag.init(
+  // columns
   {
     id: {
       type: DataTypes.INTEGER,

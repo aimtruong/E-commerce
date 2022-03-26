@@ -3,8 +3,8 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
+// GET all tags
 router.get('/', (req, res) => {
-  // find all tags
   // be sure to include its associated Product data
   Tag.findAll({
     attributes: [
@@ -38,6 +38,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// GET a tag
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
@@ -82,6 +83,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// POST a tag to create
 router.post('/', (req, res) => {
   // create a new tag
   Tag.create({
@@ -94,6 +96,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// PUT a tag to update
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
   Tag.update(req.body, {
@@ -114,6 +117,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// DELETE a tag
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
   Tag.destroy({
