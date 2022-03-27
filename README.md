@@ -11,7 +11,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 ---
@@ -25,10 +24,10 @@
 - To easily create, read, update, or delete user inputs
 
 ## First Look
-
+![first-look](https://user-images.githubusercontent.com/95596045/160262328-5cf92bc1-73b1-4363-9183-9ca8af0f5002.JPG)
 
 ## WalkThrough
-
+https://drive.google.com/file/d/1T3xtpk-u1dr1jG7YKZgKRQxXO0Pw63tw/view?usp=sharing
 
 
 ## Contributing
