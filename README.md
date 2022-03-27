@@ -24,7 +24,6 @@
 ## Usage
 - To easily create, read, update, or delete user inputs
 
-
 ## First Look
 
 
